@@ -52,6 +52,12 @@ add_action( 'after_setup_theme', 'temple_seva_portal_setup' );
  */
 function temple_seva_portal_styles() {
 	wp_enqueue_style(
+		'temple-seva-fonts',
+		'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap',
+		[],
+		null
+	);
+	wp_enqueue_style(
 		'temple-seva-portal-style',
 		get_stylesheet_uri(),
 		[],
