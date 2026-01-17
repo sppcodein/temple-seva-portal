@@ -1,0 +1,406 @@
+/* ===== Root Variables ===== */
+:root {
+    --primary-color: #ea580c;
+    --secondary-color: #f59e0b;
+    --light-orange: #fed7aa;
+    --spiritual-gold: #d97706;
+    --dark-base: #1a1a1a;
+    --contrast-white: #ffffff;
+    --neutral-gray: #6b7280;
+    --success-green: #10b981;
+    --border-radius-sm: 0.5rem;
+    --border-radius-md: 1rem;
+    --border-radius-lg: 1.5rem;
+    --border-radius-xl: 2rem;
+    --border-radius-2xl: 2.5rem;
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+    background: linear-gradient(135deg, #ea580c 0%, #f59e0b 100%);
+    border-radius: 2.5rem;
+    padding: 4rem 2rem !important;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin: 2rem auto !important;
+    max-width: 1200px;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.hero-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    color: white !important;
+    font-size: 3.5rem !important;
+    line-height: 1.1 !important;
+    font-weight: 900 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.hero-section .wp-block-search {
+    background: white;
+    border-radius: 3rem;
+    overflow: hidden;
+    max-width: 600px;
+}
+
+.hero-section .wp-block-search__input {
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+.hero-section .wp-block-search__button {
+    background: #ea580c;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    border-radius: 3rem;
+    margin-right: 0.5rem;
+}
+
+/* ===== Card Styling ===== */
+.seva-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease;
+}
+
+.seva-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px rgba(234, 88, 12, 0.15);
+}
+
+.seva-card img,
+.seva-card-image img {
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+}
+
+/* ===== How It Works Section ===== */
+.how-it-works {
+    background: #f9fafb;
+    padding: 4rem 2rem !important;
+}
+
+.how-it-works h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.how-it-works .wp-block-columns {
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.how-it-works .wp-block-column {
+    text-align: center;
+}
+
+.how-it-works h3 {
+    color: var(--primary-color);
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.how-it-works h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-base);
+}
+
+/* ===== Featured Sevas Section ===== */
+.featured-sevas {
+    padding: 4rem 2rem !important;
+    background: white;
+}
+
+.featured-sevas h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.featured-sevas .seva-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-sevas .seva-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 900;
+    color: var(--dark-base);
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    line-height: 1.6;
+    color: var(--dark-base);
+}
+
+/* ===== Header Styling ===== */
+.site-header {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-header .wp-site-title a {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* ===== Footer Styling ===== */
+.site-footer {
+    background: var(--dark-base);
+    color: white;
+    padding: 4rem 2rem;
+}
+
+.site-footer p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ===== Group & Layout ===== */
+.wp-block-group {
+    border-radius: 1.5rem;
+}
+
+.wp-block-columns {
+    gap: 2rem;
+}
+
+/* ===== How It Works Styling ===== */
+.how-it-works .wp-block-column {
+    text-align: center;
+}
+
+.how-it-works h3 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.how-it-works h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* ===== Testimonial Styling ===== */
+.testimonial-quote {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.testimonial-quote p {
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: white;
+}
+
+/* ===== Search Block ===== */
+.wp-block-search__button {
+    background: var(--primary-color);
+    border: none;
+    border-radius: 1rem;
+    padding: 0.875rem 2rem;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.wp-block-search__input {
+    border-radius: 1rem;
+    border: 2px solid #e5e7eb;
+    padding: 0.875rem 1rem;
+}
+
+.wp-block-search__input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* ===== Impact Stats Styling ===== */
+.impact-stats .wp-block-group {
+    text-align: center;
+}
+
+.impact-stats h3 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.impact-stats p {
+    color: var(--neutral-gray);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ===== Featured Sevas Styling ===== */
+.featured-sevas h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.featured-sevas .seva-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.featured-sevas .seva-card h4 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .wp-block-columns {
+        flex-direction: column;
+    }
+    
+    .seva-card {
+        margin-bottom: 2rem;
+    }
+    
+    .site-header {
+        padding: 1rem;
+    }
+    
+    .site-footer {
+        padding: 2rem 1rem;
+    }
+    
+    .how-it-works h3 {
+        font-size: 2rem;
+    }
+}
+
+/* ===== Additional WordPress Block Fixes ===== */
+.wp-block-button__link.has-primary-background-color {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.wp-block-button__link.has-secondary-background-color {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+}
+
+.has-primary-color {
+    color: var(--primary-color) !important;
+}
+
+.has-secondary-color {
+    color: var(--secondary-color) !important;
+}
+
+.has-neutral-gray-color {
+    color: var(--neutral-gray) !important;
+}
+
+.has-contrast-color {
+    color: white !important;
+}
+
+.has-base-background-color {
+    background-color: var(--dark-base) !important;
+}
+
+.has-primary-background-color {
+    background-color: var(--primary-color) !important;
+}
+
+.has-secondary-background-color {
+    background-color: var(--secondary-color) !important;
+}
+
+/* ===== Gradient Backgrounds ===== */
+.has-primary-to-secondary-gradient-background {
+    background: linear-gradient(135deg, #ea580c 0%, #f59e0b 100%) !important;
+}
+
+.has-primary-to-light-gradient-background {
+    background: linear-gradient(135deg, #ea580c 0%, #fed7aa 100%) !important;
+}
+
+.has-dark-to-primary-gradient-background {
+    background: linear-gradient(135deg, #1a1a1a 0%, #ea580c 100%) !important;
+}

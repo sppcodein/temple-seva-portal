@@ -2,3 +2,25 @@
 	vertical-align: middle;
 	fill: currentcolor;
 }
+
+/* Temple Seva Portal Button Styling */
+.wp-block-button__link {
+	border-radius: 1rem !important;
+	padding: 0.875rem 2rem !important;
+	font-weight: 700 !important;
+	text-transform: uppercase !important;
+	letter-spacing: 0.05em !important;
+	transition: all 0.3s ease !important;
+	background: linear-gradient(135deg, #ea580c 0%, #f59e0b 100%) !important;
+	color: white !important;
+	border: none !important;
+}
+
+.wp-block-button__link:hover {
+	transform: translateY(-2px) !important;
+	box-shadow: 0 10px 25px rgba(234, 88, 12, 0.3) !important;
+}
+
+.wp-block-button__link:active {
+	transform: translateY(0) !important;
+}

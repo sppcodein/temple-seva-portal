@@ -16,6 +16,16 @@
 function temple_seva_portal_register_block_patterns() {
 
 	/**
+	 * Register temple seva portal block pattern category.
+	 *
+	 * @since 1.0.0
+	 */
+	register_block_pattern_category(
+		'temple-seva-portal',
+		array( 'label' => esc_html__( 'Temple Seva Portal', 'temple-seva-portal' ) )
+	);
+
+	/**
 	 * Register an example block pattern category.
 	 *
 	 * @since 1.0.0

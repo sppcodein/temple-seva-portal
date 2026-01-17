@@ -7,23 +7,43 @@
 			"palette": [
 				{
 					"slug": "base",
-					"color": "#1e1e1e",
+					"color": "#1a1a1a",
 					"name": "Base"
 				},
 				{
 					"slug": "contrast",
-					"color": "#f0f0f0",
+					"color": "#ffffff",
 					"name": "Contrast"
 				},
 				{
 					"slug": "primary",
-					"color": "#0073aa",
-					"name": "Primary"
+					"color": "#ea580c",
+					"name": "Primary Orange"
 				},
 				{
 					"slug": "secondary",
-					"color": "#00a0d2",
-					"name": "Secondary"
+					"color": "#f59e0b",
+					"name": "Secondary Amber"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#fed7aa",
+					"name": "Light Orange"
+				},
+				{
+					"slug": "spiritual-gold",
+					"color": "#d97706",
+					"name": "Spiritual Gold"
+				},
+				{
+					"slug": "success",
+					"color": "#10b981",
+					"name": "Success Green"
+				},
+				{
+					"slug": "neutral-gray",
+					"color": "#6b7280",
+					"name": "Neutral Gray"
 				},
 				{
 					"slug": "transparent",
@@ -33,61 +53,61 @@
 			],
 			"gradients": [
 				{
+					"slug": "primary-to-secondary",
+					"gradient": "linear-gradient(135deg, #ea580c 0%, #f59e0b 100%)",
+					"name": "Orange to Amber"
+				},
+				{
+					"slug": "primary-to-light",
+					"gradient": "linear-gradient(135deg, #ea580c 0%, #fed7aa 100%)",
+					"name": "Orange to Light"
+				},
+				{
+					"slug": "dark-to-primary",
+					"gradient": "linear-gradient(135deg, #1a1a1a 0%, #ea580c 100%)",
+					"name": "Dark to Orange"
+				},
+				{
+					"slug": "secondary-to-light",
+					"gradient": "linear-gradient(135deg, #f59e0b 0%, #fef3c7 100%)",
+					"name": "Amber to Light"
+				},
+				{
 					"slug": "d-transparent-primary",
-					"gradient": "linear-gradient(to bottom right,transparent 49.9%,#0073aa 50%)",
+					"gradient": "linear-gradient(to bottom right,transparent 49.9%,#ea580c 50%)",
 					"name": "Diagonal transparent to primary"
 				},
 				{
 					"slug": "d-primary-transparent",
-					"gradient": "linear-gradient(to bottom right, #0073aa 49.9%, transparent 50%)",
+					"gradient": "linear-gradient(to bottom right, #ea580c 49.9%, transparent 50%)",
 					"name": "Diagonal primary to transparent"
 				},
 				{
 					"slug": "d-white-primary",
-					"gradient": "linear-gradient(to bottom right,#fff 49.9%,#0073aa 50%)",
+					"gradient": "linear-gradient(to bottom right,#fff 49.9%,#ea580c 50%)",
 					"name": "Diagonal white to primary"
 				},
 				{
 					"slug": "d-primary-white",
-					"gradient": "linear-gradient(to bottom right,#0073aa 49.9%,#fff 50%)",
+					"gradient": "linear-gradient(to bottom right,#ea580c 49.9%,#fff 50%)",
 					"name": "Diagonal primary to white"
-				},
-				{
-					"slug": "h-primary-white",
-					"gradient": "linear-gradient(#0073aa 49.9%,#fff 50%)",
-					"name": "Horizontal primary to white"
-				},
-				{
-					"slug": "h-white-primary",
-					"gradient": "linear-gradient(#fff 49.9%,#0073aa 50%)",
-					"name": "Horizontal white to primary"
-				},
-				{
-					"slug": "v-primary-white",
-					"gradient": "linear-gradient(to right, #0073aa 49.9%,#fff 50%)",
-					"name": "Vertical primary to white"
-				},
-				{
-					"slug": "v-white-primary",
-					"gradient": "linear-gradient(to right, #fff 49.9%,#0073aa 50%)",
-					"name": "Vertical white to primary"
 				}
 			],
 			"duotone": [
 				{
-					"colors": [ "#00a0d2", "#0073aa" ],
+					"colors": [ "#f59e0b", "#ea580c" ],
 					"slug": "secondary-primary",
-					"name": "Secondary and primary"
+					"name": "Amber and orange"
 				},
 				{
-					"colors": [ "#0073aa", "#f0f0f1" ],
+					"colors": [ "#ea580c", "#ffffff" ],
 					"slug": "primary-contrast",
-					"name": "Primary and foreground"
+					"name": "Orange and white"
 				},
 				{
-					"colors": [ "#1e1e1e", "#f0f0f1" ],
+					"colors": [ "#1a1a1a", "#ffffff" ],
 					"slug": "base-contrast",
-					"name": "background and foreground"
+					"name": "Dark and white"
 				}
 			]
 		},
@@ -138,19 +158,35 @@
 				}
 			]
 		},
+		"border": {
+			"radius": true,
+			"color": true,
+			"style": true,
+			"width": true
+		},
 		"typography": {
 			"dropCap": true,
 			"fluid": true,
 			"fontFamilies": [
 				{
-					"name": "System",
-					"slug": "system",
-					"fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif"
+					"name": "Primary / Body",
+					"slug": "primary",
+					"fontFamily": "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+				},
+				{
+					"name": "Sans Serif",
+					"slug": "sans-serif",
+					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
 				},
 				{
 					"name": "Serif",
 					"slug": "serif",
-					"fontFamily": "\"Times New Roman\",\"New York\",Times,\"Noto Serif\",serif"
+					"fontFamily": "Georgia, 'Times New Roman', serif"
+				},
+				{
+					"name": "System",
+					"slug": "system",
+					"fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif"
 				},
 				{
 					"name": "Monospace",
@@ -181,15 +217,15 @@
 			],
 			"fontSizes": [
 				{
-					"slug": "extra-small",
-					"size": "1rem",
-					"name": "Extra small",
+					"slug": "small",
+					"size": "0.875rem",
+					"name": "Small",
 					"fluid": false
 				},
 				{
-					"slug": "small",
-					"size": "1.125rem",
-					"name": "Small",
+					"slug": "base",
+					"size": "1rem",
+					"name": "Base",
 					"fluid": false
 				},
 				{
@@ -197,35 +233,44 @@
 					"size": "1.25rem",
 					"name": "Medium",
 					"fluid": {
+						"min": "1.125rem",
+						"max": "1.25rem"
+					}
+				},
+				{
+					"slug": "large",
+					"size": "1.5rem",
+					"name": "Large",
+					"fluid": {
 						"min": "1.25rem",
 						"max": "1.5rem"
 					}
 				},
 				{
-					"slug": "large",
+					"slug": "x-large",
 					"size": "2rem",
-					"name": "Large",
+					"name": "XL",
 					"fluid": {
 						"min": "1.75rem",
 						"max": "2rem"
 					}
 				},
 				{
-					"slug": "x-large",
-					"size": "2.75rem",
-					"name": "XL",
+					"slug": "xx-large",
+					"size": "2.5rem",
+					"name": "XXL",
 					"fluid": {
-						"min": "2.5rem",
-						"max": "2.75rem"
+						"min": "2.25rem",
+						"max": "2.5rem"
 					}
 				},
 				{
-					"slug": "xx-large",
-					"size": "3.75rem",
-					"name": "XXL",
+					"slug": "3xl",
+					"size": "3rem",
+					"name": "3XL",
 					"fluid": {
-						"min": "3rem",
-						"max": "3.75rem"
+						"min": "2.5rem",
+						"max": "3rem"
 					}
 				}
 			]
@@ -473,9 +518,9 @@
 			"button": {
 				"border": {
 					"color": "var(--wp--preset--color--transparent)",
-					"width": "4px",
+					"width": "0px",
 					"style": "solid",
-					"radius": "4px"
+					"radius": "1rem"
 				},
 				"color": {
 					"background": "var(--wp--preset--color--primary)",
@@ -483,19 +528,28 @@
 				},
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--small)",
-					"fontWeight": "700"
+					"fontWeight": "700",
+					"textTransform": "uppercase",
+					"letterSpacing": "0.05em"
 				},
-				"shadow": "var(--wp--preset--shadow--natural)",
+				"spacing": {
+					"padding": {
+						"top": "0.875rem",
+						"right": "2rem", 
+						"bottom": "0.875rem",
+						"left": "2rem"
+					}
+				},
 				":hover": {
-					"border": {
-						"color": "var(--wp--preset--color--secondary)"
+					"color": {
+						"background": "var(--wp--preset--color--secondary)"
 					}
 				}
 			}
 		},
 		"typography": {
 			"fontSize": "var(--wp--preset--font-size--medium)",
-			"fontFamily": "var(--wp--preset--font-family--system)",
+			"fontFamily": "var(--wp--preset--font-family--primary)",
 			"lineHeight": "1.7"
 		},
 		"spacing":{

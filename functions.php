@@ -63,6 +63,12 @@ function temple_seva_portal_styles() {
 		[],
 		TEMPLE_SEVA_PORTAL_VERSION
 	);
+	wp_enqueue_style(
+		'temple-seva-portal-temple-styles',
+		get_theme_file_uri( 'assets/css/temple-styles.css' ),
+		[ 'temple-seva-portal-shared-styles' ],
+		TEMPLE_SEVA_PORTAL_VERSION
+	);
 }
 add_action( 'wp_enqueue_scripts', 'temple_seva_portal_styles' );
 

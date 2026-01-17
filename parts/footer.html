@@ -1,6 +1,32 @@
-<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|70"},"padding":{"left":"var:preset|spacing|60","right":"var:preset|spacing|60"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)">
-	<!-- wp:navigation {"overlayMenu":"never","overlayBackgroundColor":"base","overlayTextColor":"contrast","layout":{"type":"flex","justifyContent":"left","orientation":"horizontal"},"fontSize":"extra-small"} /-->
-	<!-- wp:pattern {"slug":"temple-seva-portal/footer-links"} /-->
+<!-- wp:group {"className":"site-footer","style":{"spacing":{"padding":{"top":"4rem","right":"2rem","bottom":"4rem","left":"2rem"}},"color":{"background":"var:preset|color|base","text":"var:preset|color|contrast"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group site-footer has-base-background-color has-contrast-color has-text-color has-background" style="padding-top:4rem;padding-right:2rem;padding-bottom:4rem;padding-left:2rem">
+	
+	<!-- Site Identity and Mission -->
+	<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"},"style":{"spacing":{"gap":"2rem","margin":{"bottom":"2rem"}}}} -->
+	<div class="wp-block-group" style="margin-bottom:2rem">
+		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"},"style":{"spacing":{"gap":"1rem"}}} -->
+		<div class="wp-block-group">
+			<!-- wp:site-logo {"width":40} /-->
+			<!-- wp:heading {"level":2,"textColor":"contrast","style":{"typography":{"fontSize":"1.5rem","fontWeight":"900"}},"fontFamily":"serif"} -->
+			<h2 class="wp-block-heading has-contrast-color has-text-color has-serif-font-family" style="font-size:1.5rem;font-weight:900">DHARMA<span style="color:#ea580c">SEVA</span></h2>
+			<!-- /wp:heading -->
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+	
+	<!-- Mission Statement -->
+	<!-- wp:paragraph {"align":"center","textColor":"contrast","style":{"typography":{"fontSize":"1.125rem"},"spacing":{"margin":{"bottom":"2rem"}}}} -->
+	<p class="has-text-align-center has-contrast-color has-text-color" style="font-size:1.125rem;margin-bottom:2rem">Helping devotees across the globe stay spiritually connected with their roots while supporting rural temples and their communities.</p>
+	<!-- /wp:paragraph -->
+	
+	<!-- Footer Links -->
+	<!-- wp:navigation {"style":{"typography":{"fontSize":"0.875rem"}},"layout":{"type":"flex","justifyContent":"center"}} /-->
+	
+	<!-- Copyright -->
+	<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.75rem"},"color":{"text":"var:preset|color|neutral-gray"},"spacing":{"margin":{"top":"2rem"}}}} -->
+	<p class="has-text-align-center has-text-color" style="color:var(--wp--preset--color--neutral-gray);font-size:0.75rem;margin-top:2rem">© 2026 DharmaSeva. All rights reserved. Bridging devotion across distances.</p>
+	<!-- /wp:paragraph -->
+	
 </div>
 <!-- /wp:group -->

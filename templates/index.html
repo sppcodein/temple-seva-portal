@@ -1,9 +1,38 @@
-<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header"} /-->
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)">
-	<!-- wp:pattern {"slug":"temple-seva-portal/query"} /-->
-</main>
+<!-- Hero Section -->
+<!-- wp:group {"className":"hero-section","style":{"spacing":{"padding":{"top":"4rem","right":"2rem","bottom":"4rem","left":"2rem"},"margin":{"top":"0","bottom":"0"}},"color":{"gradient":"primary-to-secondary"},"border":{"radius":"2.5rem"}},"layout":{"type":"constrained","contentSize":"1200px"}} -->
+<div class="wp-block-group hero-section has-primary-to-secondary-gradient-background has-background" style="border-radius:2.5rem;margin-top:0;margin-bottom:0;padding-top:4rem;padding-right:2rem;padding-bottom:4rem;padding-left:2rem">
+	<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"1rem"}}},"layout":{"type":"flex","justifyContent":"left"}} -->
+	<div class="wp-block-group" style="margin-bottom:1rem">
+		<!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem","fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.05em"},"color":{"text":"#ffffff"}}} -->
+		<p class="has-text-color" style="color:#ffffff;font-size:0.875rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em">✨ Supporting 1,240+ Rural Temples</p>
+		<!-- /wp:paragraph -->
+	</div>
+	<!-- /wp:group -->
+	
+	<!-- wp:heading {"level":1,"textColor":"contrast","style":{"typography":{"fontSize":"3.5rem","fontWeight":"900","lineHeight":"1.1"},"spacing":{"margin":{"bottom":"1.5rem"}}},"fontFamily":"system-sans-serif"} -->
+	<h1 class="has-contrast-color has-text-color has-system-sans-serif-font-family" style="font-size:3.5rem;font-weight:900;line-height:1.1;margin-bottom:1.5rem">Temple Seva Anywhere.<br><span style="color:#fed7aa">Blessings from Your Roots.</span></h1>
+	<!-- /wp:heading -->
+	
+	<!-- wp:paragraph {"textColor":"contrast","style":{"typography":{"fontSize":"1.125rem","lineHeight":"1.6"},"spacing":{"margin":{"bottom":"2rem"}}}} -->
+	<p class="has-contrast-color has-text-color" style="font-size:1.125rem;line-height:1.6;margin-bottom:2rem">Perform authentic rituals in your family temple. We bridge the gap between busy modern lives and sacred ancestral traditions.</p>
+	<!-- /wp:paragraph -->
+	
+	<!-- wp:search {"label":"Search temples...","placeholder":"Search State, District or Hometown...","buttonText":"Find My Temple","buttonPosition":"button-inside","buttonUseIcon":false,"style":{"border":{"radius":"3rem"}}} /-->
+</div>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer"} /-->
+<!-- Featured Sevas Section -->
+<!-- wp:pattern {"slug":"temple-seva-portal/featured-sevas"} /-->
+
+<!-- How It Works Section -->
+<!-- wp:pattern {"slug":"temple-seva-portal/how-it-works"} /-->
+
+<!-- Testimonial Section -->
+<!-- wp:pattern {"slug":"temple-seva-portal/testimonial"} /-->
+
+<!-- Impact Stats Section -->
+<!-- wp:pattern {"slug":"temple-seva-portal/impact-stats"} /-->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
