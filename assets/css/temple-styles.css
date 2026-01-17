@@ -5,14 +5,462 @@
     --light-orange: #fed7aa;
     --spiritual-gold: #d97706;
     --dark-base: #1a1a1a;
+    --gray-900: #111827;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
     --contrast-white: #ffffff;
     --neutral-gray: #6b7280;
     --success-green: #10b981;
+    --amber-50: #fffbeb;
+    --amber-100: #fef3c7;
+    --amber-200: #fcd34d;
     --border-radius-sm: 0.5rem;
     --border-radius-md: 1rem;
     --border-radius-lg: 1.5rem;
     --border-radius-xl: 2rem;
     --border-radius-2xl: 2.5rem;
+    --border-radius-3xl: 3rem;
+}
+
+/* ===== Global Styles ===== */
+body {
+    background-color: var(--gray-50);
+    color: var(--gray-900);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+/* ===== Navigation / Header ===== */
+.site-header {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--gray-100) !important;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+}
+
+.wp-site-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 !important;
+}
+
+.wp-site-title a {
+    text-decoration: none;
+    color: var(--gray-900);
+}
+
+.wp-site-title span {
+    color: var(--primary-color);
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%) !important;
+    border-radius: 2.5rem !important;
+    padding: 4rem 2rem !important;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin: 2rem auto 0 auto !important;
+    max-width: 1280px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.hero-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    color: white !important;
+    font-size: 3.5rem !important;
+    line-height: 1.1 !important;
+    font-weight: 900 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.hero-section p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+/* ===== Search Box ===== */
+.wp-block-search {
+    background: white !important;
+    border-radius: 3rem !important;
+    overflow: hidden;
+    max-width: 600px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+    display: flex;
+    align-items: center;
+}
+
+.wp-block-search__input {
+    border: none !important;
+    padding: 1rem 2rem !important;
+    font-size: 1rem;
+    flex: 1;
+    background: transparent !important;
+}
+
+.wp-block-search__button {
+    background: var(--primary-color) !important;
+    color: white !important;
+    border: none !important;
+    padding: 1rem 2rem !important;
+    font-weight: 700 !important;
+    border-radius: 3rem !important;
+    margin-right: 0.5rem !important;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.wp-block-search__button:hover {
+    background: #d94a0d !important;
+}
+
+/* ===== Personalized Recommendations Section ===== */
+.recommendations-section {
+    background: var(--amber-50) !important;
+    border: 1px solid var(--amber-100) !important;
+    border-radius: 2.5rem !important;
+    padding: 2rem !important;
+}
+
+/* ===== How It Works Section ===== */
+.how-it-works {
+    background: white !important;
+    border: 1px solid var(--gray-200) !important;
+    border-radius: 3rem !important;
+    padding: 3rem 2rem !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.how-it-works h2 {
+    font-size: 1.875rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 0.5rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-900) !important;
+}
+
+.how-it-works > p {
+    text-align: center;
+    color: var(--gray-500) !important;
+    margin-bottom: 3rem !important;
+}
+
+.how-it-works .wp-block-columns {
+    gap: 3rem;
+    margin-top: 3rem !important;
+}
+
+.how-it-works .wp-block-column {
+    text-align: center;
+}
+
+.how-it-works h3 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--primary-color) !important;
+    margin-bottom: 1rem !important;
+    line-height: 1;
+}
+
+.how-it-works h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem !important;
+    color: var(--gray-900) !important;
+}
+
+.how-it-works .wp-block-group {
+    padding: 2rem !important;
+}
+
+/* ===== Featured Sevas Section ===== */
+.featured-sevas {
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+.featured-sevas h2 {
+    font-size: 1.875rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem !important;
+    color: var(--gray-900) !important;
+}
+
+.featured-sevas > p {
+    color: var(--gray-500) !important;
+    margin-bottom: 2rem !important;
+}
+
+/* ===== Seva Card ===== */
+.seva-card {
+    background: white !important;
+    border: 1px solid var(--gray-100) !important;
+    border-radius: 2rem !important;
+    padding: 2rem !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.seva-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-5px);
+}
+
+.seva-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem !important;
+    color: var(--gray-900) !important;
+}
+
+.seva-card p {
+    color: var(--gray-500) !important;
+    font-size: 0.875rem;
+}
+
+.seva-card h4 {
+    color: var(--primary-color) !important;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem !important;
+}
+
+.seva-card img {
+    border-radius: 1rem !important;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin-bottom: 1rem !important;
+}
+
+/* ===== Testimonial Section ===== */
+.testimonial-section {
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+.testimonial-section .wp-block-group {
+    background: var(--gray-900) !important;
+    border-radius: 3rem !important;
+    padding: 3rem 2rem !important;
+    text-align: center;
+    color: white;
+}
+
+.testimonial-section blockquote {
+    font-size: 2rem;
+    font-style: italic;
+    line-height: 1.8;
+    margin-bottom: 2rem !important;
+    color: rgba(255, 255, 255, 0.95);
+    font-family: Georgia, serif;
+}
+
+.testimonial-section h4 {
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: white !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.testimonial-section p {
+    color: var(--primary-color) !important;
+    font-size: 0.875rem;
+}
+
+/* ===== Impact Stats Section ===== */
+.impact-stats {
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+.impact-stats .wp-block-columns {
+    gap: 1.5rem;
+}
+
+.impact-stats .wp-block-column {
+    text-align: center;
+}
+
+.impact-stat-card {
+    background: white !important;
+    border: 1px solid var(--gray-100) !important;
+    border-radius: 2rem !important;
+    padding: 2rem !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.impact-stat-card h3 {
+    font-size: 1.875rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem !important;
+    line-height: 1;
+}
+
+.impact-stat-card p {
+    font-size: 0.625rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-400) !important;
+    margin: 0 !important;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    color: var(--gray-900);
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem !important;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    line-height: 1.6;
+    color: var(--gray-900);
+}
+
+/* ===== Buttons ===== */
+.wp-block-button__link {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border-radius: 1rem !important;
+    padding: 1rem 1.5rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s ease;
+}
+
+.wp-block-button__link:hover {
+    background-color: #d94a0d !important;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+    background: var(--gray-900) !important;
+    color: white;
+    padding: 4rem 2rem !important;
+    text-align: center;
+}
+
+.site-footer h2 {
+    color: white !important;
+    margin-bottom: 1rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.site-footer p {
+    color: rgba(255, 255, 255, 0.8) !important;
+    margin-bottom: 1rem !important;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 2rem !important;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem !important;
+    }
+
+    .how-it-works {
+        padding: 2rem !important;
+    }
+
+    .how-it-works h2 {
+        font-size: 1.5rem;
+    }
+
+    .impact-stats .wp-block-columns {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* ===== Utility Classes ===== */
+.text-center {
+    text-align: center;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.text-white {
+    color: white;
+}
+
+.bg-orange-50 {
+    background-color: rgba(234, 88, 12, 0.05) !important;
+}
+
+.bg-amber-50 {
+    background-color: var(--amber-50) !important;
+}
+
+.bg-white {
+    background-color: white !important;
 }
 
 /* ===== Hero Section ===== */
